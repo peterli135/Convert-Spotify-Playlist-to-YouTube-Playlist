@@ -14,7 +14,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import json
 import requests
-from pyyoutube import Api
 import os
 
 import google_auth_oauthlib.flow
