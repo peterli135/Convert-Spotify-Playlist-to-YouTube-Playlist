@@ -1,15 +1,3 @@
-"""
-What We Want the Program to Do:
-1. Enter in a Spotify Playlist URL
-2. Converts Spotify Playlist to Youtube Playlist
-
-How does this Work:
-1. Must have a Spotify Playlist URL
-2. Login to YouTube
-3. Create a new playlist
-4. Search for the song and add it to playlist.
-"""
-
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import json
@@ -45,7 +33,7 @@ def url_convert_id(playlist_url):
     url_parts = playlist_url.split("/")
     return url_parts[4].split("?")[0]
 
-
+#Gets Spotify songs
 def spotify_playlist(playlist_url):
 
     playlist_id = url_convert_id(playlist_url)
@@ -78,7 +66,7 @@ def spotify_playlist(playlist_url):
 
     return tracklist
 
-
+#Creates YouTube playlist
 def create_youtube_playlist():
     request = youtube.playlists().insert(
         part="snippet,status",
@@ -100,7 +88,7 @@ def create_youtube_playlist():
     youtube_playlist_id = response["id"]
     return(youtube_playlist_id)
 
-
+#Gets the first video of the song that was searched up
 def search_youtube_song(song):
     request = youtube.search().list(
         part="snippet",
@@ -118,7 +106,7 @@ def search_youtube_song(song):
     add_to_playlist(video_id, youtube_playlist_id)
     return(video_id)
 
-
+#Adds the video from previous function to playlist
 def add_to_playlist(videoId, playlistId):
     request = youtube.playlistItems().insert(
         part="snippet",
