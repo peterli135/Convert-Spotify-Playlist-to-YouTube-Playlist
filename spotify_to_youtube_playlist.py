@@ -61,7 +61,7 @@ def spotify_playlist(playlist_url):
     
     create_youtube_playlist()
     for track in tracklist:
-        print(track)
+        print("Found Spotify Song: " + track)
         search_youtube_song(track)
 
     return tracklist
@@ -101,7 +101,7 @@ def search_youtube_song(song):
     for item in response["items"]:
         video_title = item["snippet"]["title"]
         video_id = item["id"]["videoId"]
-        print(video_title)
+        print("Adding song to YouTube playlist: " + video_title)
     
     add_to_playlist(video_id, youtube_playlist_id)
     return(video_id)
