@@ -4,11 +4,13 @@ A program I created in order to convert your Spotify Playlist to a YouTube Playl
 - Uses the YouTube Data API in order to automate creating a playlist and adding the videos/songs into the playlist.
 - Uses the spotipy library to retrieve the songs that are in one of your playlists that you selected to be converted.
 
-In order to use this program, you must create an application/project within the Spotify Developers Console and Google Developers Console.
-You will then be able to get the client ids, client secrets, and API keys from both the programs.
 
-Input the Spotify client id and client secret into the secrets.json file.
-Input the Google client id, client secret, and API key into the client_secrets.json file.
+In order to use this program, you must do the following:
+1. Create an application/project within both the Spotify Developers Console and Google Developers Console.
+2. You then have to retrieve the client id and client secret from the Spotify Dashboard and retrieve the client id, client secret, and API key from the Google Developers Console.
+3. Input your Spotify client id and client secret into the secrets.json file.
+4. Input the Google client id, client secret, and API key into the client_secrets.json file.
+
 
 Here is an example of how the program works with a short Spotify playlist that I created.
 1. The program first asks you to visit a URL to authorize the application with oauth2, and you have to enter in an authorization code:
