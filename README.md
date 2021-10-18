@@ -10,7 +10,7 @@ You will then be able to get the client ids, client secrets, and API keys from b
 Input the Spotify client id and client secret into the secrets.json file.
 Input the Google client id, client secret, and API key into the client_secrets.json file.
 
-Here is how the program works:
+Here is an example of how the program works with a short Spotify playlist that I created.
 1. The program first asks you to visit a URL to authorize the application with oauth2, and you have to enter in an authorization code:
 ![image](https://user-images.githubusercontent.com/90528127/137650570-9ed85c77-40f0-4189-9b3e-e2021b409f62.png)
 2. It then asks for the Spotify playlist URL link for which you would like to convert to a Youtube playlist.
@@ -19,4 +19,3 @@ Here is how the program works:
 ![image](https://user-images.githubusercontent.com/90528127/137650642-b5f75de8-b106-4c10-87ab-9a3d3bb3b497.png)
 4. You can then check your Youtube playlists and the playlist with all of the songs from that playlist will appear.
 ![image](https://user-images.githubusercontent.com/90528127/137650685-472c2b4a-6d92-4696-976d-a3b3899d3197.png)
-
