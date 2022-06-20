@@ -1,4 +1,4 @@
-# Spotify-nd
+# Spotifynd
 
 A program I created in order to convert your Spotify Playlist to a YouTube Playlist.
 - Uses the YouTube Data API in order to automate creating a playlist and adding the videos/songs into the playlist.
